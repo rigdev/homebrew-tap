@@ -10,7 +10,7 @@ class RigAdmin < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/rigdev/rig/releases/download/v1.0.0/rig-server_darwin_x86_64.tar.gz"
-      sha256 "4472e6ff73c69fdf9f4318b879e7f43f48c94eee23a1890fab6acc0f23c8258e"
+      sha256 "129d43d2ab4446f07f786be8c1c9547c3fcdcfa641aa3330a1034d42a232b106"
 
       def install
         bin.install "rig-admin"
@@ -18,7 +18,7 @@ class RigAdmin < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/rigdev/rig/releases/download/v1.0.0/rig-server_darwin_arm64.tar.gz"
-      sha256 "b5cac3512c4057a268362085167f5ef4405c34b03964c0148bfd03f47c138dd1"
+      sha256 "64fe22ad0a97367bd3fd31edbae67a43e01d9d1cba8e68b7a0f010500ea138c2"
 
       def install
         bin.install "rig-admin"
@@ -29,7 +29,7 @@ class RigAdmin < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/rigdev/rig/releases/download/v1.0.0/rig-server_linux_arm64.tar.gz"
-      sha256 "acd746fe725985a239cae8f89f565c395facf1cb40811baeb7859d9a2327e593"
+      sha256 "382ccbf767dd325ca0e624b80416f5e03fc5bab23509d1abd8e7118118d86ee6"
 
       def install
         bin.install "rig-admin"
@@ -37,7 +37,7 @@ class RigAdmin < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/rigdev/rig/releases/download/v1.0.0/rig-server_linux_x86_64.tar.gz"
-      sha256 "6668db65668db2dfed643654d638b4a3d997bde778b9563adbc85231ce6c49a2"
+      sha256 "a23de54b9420d0ad2a5470e9d0ada890a182cbf49bcba714b2568e3306d47ad9"
 
       def install
         bin.install "rig-admin"
