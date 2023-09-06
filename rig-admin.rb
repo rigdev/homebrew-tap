@@ -5,20 +5,20 @@
 class RigAdmin < Formula
   desc ""
   homepage ""
-  version "1.1.0"
+  version "1.1.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rigdev/rig/releases/download/v1.1.0/rig-server_darwin_arm64.tar.gz"
-      sha256 "85884787c48247e63ef5d91c6e6e358610ffd628bb38b882e4f89dacb9496720"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.1.1/rig-server_darwin_x86_64.tar.gz"
+      sha256 "b11e9ac1dffd8c4ac64fac0080303007163163f679540ab56d8edcd974084d91"
 
       def install
         bin.install "rig-admin"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.1.0/rig-server_darwin_x86_64.tar.gz"
-      sha256 "f2b7db8cea0183959fcda24d82e3a1240f9cb52c29bb129e6a395de9df1e37fb"
+    if Hardware::CPU.arm?
+      url "https://github.com/rigdev/rig/releases/download/v1.1.1/rig-server_darwin_arm64.tar.gz"
+      sha256 "3c00886004b93ba6bd13839fe78e9795e66edf7ded7085c0c67a735ce9a4c8fc"
 
       def install
         bin.install "rig-admin"
@@ -27,17 +27,17 @@ class RigAdmin < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.1.0/rig-server_linux_x86_64.tar.gz"
-      sha256 "e88393455d2b98aa7493f14a5537d76566239d946b70d066eb862603c6d39300"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rigdev/rig/releases/download/v1.1.1/rig-server_linux_arm64.tar.gz"
+      sha256 "12c54f10c5fd75bddcde4e69ef254515b3cf21e28fa92a9d2a76966c2efc05ea"
 
       def install
         bin.install "rig-admin"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rigdev/rig/releases/download/v1.1.0/rig-server_linux_arm64.tar.gz"
-      sha256 "7f43c7c1ec0c72dc7ea0c7cc4df6f3e25dfb00825f7cee77f2b5e6c20dcb3cfc"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.1.1/rig-server_linux_x86_64.tar.gz"
+      sha256 "eecdadffd5e9e5943dd3a2490fb6ac27b84f645a4ec9c990312fb0eb695db1d7"
 
       def install
         bin.install "rig-admin"
