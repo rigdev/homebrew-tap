@@ -5,20 +5,20 @@
 class Rig < Formula
   desc ""
   homepage ""
-  version "1.5.0-rc.7"
+  version "1.5.0-rc.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rigdev/rig/releases/download/v1.5.0-rc.7/rig_darwin_arm64.tar.gz"
-      sha256 "65cc2b949a1ac797824ed2919ec3f42670e5a1e52ce7c295d6c7cd1772e243f3"
+      url "https://github.com/rigdev/rig/releases/download/v1.5.0-rc.8/rig_darwin_arm64.tar.gz"
+      sha256 "8fcd7beac926b639f56f5cbac1f9d2f0e355a88d423fde3c3302ce638bbf8531"
 
       def install
         bin.install "rig"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.5.0-rc.7/rig_darwin_x86_64.tar.gz"
-      sha256 "d7a4dc9549d90408fd3be48b0e7611673c79b7e5408a9924fc4719868e91650f"
+      url "https://github.com/rigdev/rig/releases/download/v1.5.0-rc.8/rig_darwin_x86_64.tar.gz"
+      sha256 "359ead2f2fd5d6ba9207f4b6b74ce74dd98ef84f5dfeb27ad6d9506265fda280"
 
       def install
         bin.install "rig"
@@ -27,17 +27,17 @@ class Rig < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.5.0-rc.7/rig_linux_x86_64.tar.gz"
-      sha256 "0f1ff084f32a60c961c0450c7f85efd2a3bfac312f1cbf9e9f7341bed32eceb1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rigdev/rig/releases/download/v1.5.0-rc.8/rig_linux_arm64.tar.gz"
+      sha256 "e6069d7ef98957c56c96cafc443ca527d482f2ca107c79abbaaa1a22295eefd0"
 
       def install
         bin.install "rig"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rigdev/rig/releases/download/v1.5.0-rc.7/rig_linux_arm64.tar.gz"
-      sha256 "e1abd34e41c123746a286781c82e4c070df5667eb2a7cfed8dd1634ed48144a4"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.5.0-rc.8/rig_linux_x86_64.tar.gz"
+      sha256 "b39b098203996cb997afd8362083fb18ae9c6810c9fabe8d418efe7d8d7051fd"
 
       def install
         bin.install "rig"
