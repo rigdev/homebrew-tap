@@ -5,21 +5,21 @@
 class RigOps < Formula
   desc ""
   homepage ""
-  version "1.7.4"
+  version "1.7.5"
   depends_on :linux
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.7.4/rig-ops_linux_x86_64.tar.gz"
-      sha256 "8df90c3dc258651ebead49004510837ea28fa716f3e2448bd4c84036e2fc5bc0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rigdev/rig/releases/download/v1.7.5/rig-ops_linux_arm64.tar.gz"
+      sha256 "509d11131d4abf272c839b6e82df6d8c5d93684ef68dda879bca9aaaf262b0a7"
 
       def install
         bin.install "rig-ops"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rigdev/rig/releases/download/v1.7.4/rig-ops_linux_arm64.tar.gz"
-      sha256 "1ca6d631ac0f3fe81c3941f1e8f7fb9e29425689f31ce55876a3c08b7a822e0b"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.7.5/rig-ops_linux_x86_64.tar.gz"
+      sha256 "953efd473f26c53092dcc06c6b37887de7c34997bd458119d858fe3b8684fefc"
 
       def install
         bin.install "rig-ops"
