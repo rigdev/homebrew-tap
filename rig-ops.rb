@@ -5,20 +5,20 @@
 class RigOps < Formula
   desc ""
   homepage ""
-  version "1.8.5-rc.1"
+  version "1.8.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.5-rc.1/rig-ops_darwin_arm64.tar.gz"
-      sha256 "5054de2bb591d772b5dc1f11fcb505aa216c97e4ba659d298637b7d7c567e33b"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.8.5/rig-ops_darwin_x86_64.tar.gz"
+      sha256 "a7d4000886c27359d94a9d74695d7547550bf1946cc4c3f6495e18f4e1593027"
 
       def install
         bin.install "rig-ops"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.5-rc.1/rig-ops_darwin_x86_64.tar.gz"
-      sha256 "3e500f2d6dd332d0859dd550665be690137e0ba88b0b5938898e8687276ad93d"
+    if Hardware::CPU.arm?
+      url "https://github.com/rigdev/rig/releases/download/v1.8.5/rig-ops_darwin_arm64.tar.gz"
+      sha256 "453803fc356499d343e5352bbb4e1bf89d080c753839d468a8d931ae0d3346bb"
 
       def install
         bin.install "rig-ops"
@@ -28,16 +28,16 @@ class RigOps < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.5-rc.1/rig-ops_linux_arm64.tar.gz"
-      sha256 "2b72935a3e8b4d49325df9e8d951ef15e50c78223e17a68b72911ab2f514e7cb"
+      url "https://github.com/rigdev/rig/releases/download/v1.8.5/rig-ops_linux_arm64.tar.gz"
+      sha256 "d9169efdc55fe1ed76d5220a7bf78114a12a731dd0239338bf72e4d47f0aaa9b"
 
       def install
         bin.install "rig-ops"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.5-rc.1/rig-ops_linux_x86_64.tar.gz"
-      sha256 "1c164d02c095299c2c6fd0fc38373c3784bd052b8d876439f95bec2e98223bae"
+      url "https://github.com/rigdev/rig/releases/download/v1.8.5/rig-ops_linux_x86_64.tar.gz"
+      sha256 "b08e929555cc293e477a871d7d8bf9946ae82daa3f322db52fdd53c5a9e41c61"
 
       def install
         bin.install "rig-ops"
