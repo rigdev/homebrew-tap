@@ -5,20 +5,20 @@
 class RigOps < Formula
   desc ""
   homepage ""
-  version "1.8.7"
+  version "1.8.8"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.7/rig-ops_darwin_arm64.tar.gz"
-      sha256 "cd63394c240513818bf2516942f93365d786c0269ef3c7a18869aff658600d5b"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.8.8/rig-ops_darwin_x86_64.tar.gz"
+      sha256 "7a7a8f59d68b4f3fe2c03200554da2323f521dfcebdb5559eefe757aaf517c68"
 
       def install
         bin.install "rig-ops"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.7/rig-ops_darwin_x86_64.tar.gz"
-      sha256 "ff461d08060a668b2516de7624aa8bf75b5a8e38ef69c3106bedb82572d3c71f"
+    if Hardware::CPU.arm?
+      url "https://github.com/rigdev/rig/releases/download/v1.8.8/rig-ops_darwin_arm64.tar.gz"
+      sha256 "356777f6287c7730aebe27c766148651f0d0ddaffec5622790d70aa95e5e55ad"
 
       def install
         bin.install "rig-ops"
@@ -27,17 +27,17 @@ class RigOps < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.7/rig-ops_linux_arm64.tar.gz"
-      sha256 "b8cec11380badd970ab4b279d884c39b1c284a1b02af3dbf990927b2ca6dc850"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.8.8/rig-ops_linux_x86_64.tar.gz"
+      sha256 "47b8ab2c1601a143f2fbe4e45dfb58013e7547612b1d8130e1e26ed826880710"
 
       def install
         bin.install "rig-ops"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.7/rig-ops_linux_x86_64.tar.gz"
-      sha256 "c5de45769babbbe54fbd1bb572bb6536b5c3b089a437461ad76fef8ea256ece6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rigdev/rig/releases/download/v1.8.8/rig-ops_linux_arm64.tar.gz"
+      sha256 "9307beba5f911b8c94ad801affb1565f65b1d974164814683648779ff5e1b06f"
 
       def install
         bin.install "rig-ops"
