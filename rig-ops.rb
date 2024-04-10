@@ -5,20 +5,20 @@
 class RigOps < Formula
   desc ""
   homepage ""
-  version "1.8.10"
+  version "1.8.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.10/rig-ops_darwin_x86_64.tar.gz"
-      sha256 "50dd76dec2a95dc67bb7a7fc9e7e924fb58fec2093b51c0d89210f3b2e76aacc"
+      url "https://github.com/rigdev/rig/releases/download/v1.8.11/rig-ops_darwin_x86_64.tar.gz"
+      sha256 "347ac76e3c3e0b05a99b0543a45cbb47abcf5d34573464fddedf4a20537a7443"
 
       def install
         bin.install "rig-ops"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.10/rig-ops_darwin_arm64.tar.gz"
-      sha256 "6614ecacf7ec0b87de13454372f94b3db1f287870594e3e5f1f4e3e163bb05ad"
+      url "https://github.com/rigdev/rig/releases/download/v1.8.11/rig-ops_darwin_arm64.tar.gz"
+      sha256 "ec9f509ebc14499b7131ac384ddf6ae1d3d227f6bb0a070f9efc1b0045ef66ed"
 
       def install
         bin.install "rig-ops"
@@ -28,16 +28,16 @@ class RigOps < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.10/rig-ops_linux_arm64.tar.gz"
-      sha256 "bfd915eb1e49b2d17126834ea68f52fbb001d396cc552891548422b1b93873be"
+      url "https://github.com/rigdev/rig/releases/download/v1.8.11/rig-ops_linux_arm64.tar.gz"
+      sha256 "ac4783d5030884343d6252a868d4f9ef99a029a820e41103ae950567eb65a991"
 
       def install
         bin.install "rig-ops"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.10/rig-ops_linux_x86_64.tar.gz"
-      sha256 "a040b2ed2d3e81600cbf6dcedfe71c1ddda6f61e8b507bbc4bc21552ed8fc8b1"
+      url "https://github.com/rigdev/rig/releases/download/v1.8.11/rig-ops_linux_x86_64.tar.gz"
+      sha256 "f7ac8262479f203878ec808ac9a499d92bb0f12664df3d9e6ffaca79a6d202c5"
 
       def install
         bin.install "rig-ops"
