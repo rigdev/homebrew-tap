@@ -5,20 +5,20 @@
 class Rig < Formula
   desc ""
   homepage ""
-  version "1.8.17"
+  version "1.9.0-rc.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.17/rig_darwin_x86_64.tar.gz"
-      sha256 "b9c16e193eb3b0a77b374377a09e58b1ad9801db00e35a009e48fa4c873c5110"
+    if Hardware::CPU.arm?
+      url "https://github.com/rigdev/rig/releases/download/v1.9.0-rc.1/rig_darwin_arm64.tar.gz"
+      sha256 "6d88e8f88a3a3a30f2c1ead764385bae25cfaf21e3f38520a97556271d09a8d6"
 
       def install
         bin.install "rig"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.17/rig_darwin_arm64.tar.gz"
-      sha256 "3902914673a97e76238010dd8be0d7d4bb61dc113ddd68accbffbcb655933c5c"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.9.0-rc.1/rig_darwin_x86_64.tar.gz"
+      sha256 "db0db57d8c04aa3c1902b74b8ce52c9fd793f9f72583a0fff8761c60f56a52d9"
 
       def install
         bin.install "rig"
@@ -28,16 +28,16 @@ class Rig < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.17/rig_linux_arm64.tar.gz"
-      sha256 "808155dd31f7732dfc5ab3c19247d2f6d23fcac82501056c1c70056251bff1b9"
+      url "https://github.com/rigdev/rig/releases/download/v1.9.0-rc.1/rig_linux_arm64.tar.gz"
+      sha256 "4d2374db998085eab1cfaff9cbf8456380c51fc0bdc11a954cadd13e30d29705"
 
       def install
         bin.install "rig"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.8.17/rig_linux_x86_64.tar.gz"
-      sha256 "c2aaf003472d9aea0cdaf7d0eff532f4023bb5bc57d6d0dc1e849bdea5267739"
+      url "https://github.com/rigdev/rig/releases/download/v1.9.0-rc.1/rig_linux_x86_64.tar.gz"
+      sha256 "4c46401e84562b3804499fc6ede2bb27bdc9c045c7d9bfffbce327cd80344b91"
 
       def install
         bin.install "rig"
