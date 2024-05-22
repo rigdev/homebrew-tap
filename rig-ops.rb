@@ -5,20 +5,20 @@
 class RigOps < Formula
   desc ""
   homepage ""
-  version "1.9.1"
+  version "1.9.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rigdev/rig/releases/download/v1.9.1/rig-ops_darwin_arm64.tar.gz"
-      sha256 "d1b7d728634301fb02578eda1e9b026b118ea317904039410b2050747c515d72"
+      url "https://github.com/rigdev/rig/releases/download/v1.9.2/rig-ops_darwin_arm64.tar.gz"
+      sha256 "4db46ecbfa571e25603563b253ed9ec1173fb0b75b77dbe9dfa14cf9479d52c1"
 
       def install
         bin.install "rig-ops"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.9.1/rig-ops_darwin_x86_64.tar.gz"
-      sha256 "561ba5f1f52762b931e7a5b96bad1775049b8d95c1c6a9ddba478ede6f171fef"
+      url "https://github.com/rigdev/rig/releases/download/v1.9.2/rig-ops_darwin_x86_64.tar.gz"
+      sha256 "0e3d0ae72775d7a7c88b46c1687da1a37e8435cbe2caae1a158b3d579f30b0ef"
 
       def install
         bin.install "rig-ops"
@@ -27,17 +27,17 @@ class RigOps < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.9.1/rig-ops_linux_x86_64.tar.gz"
-      sha256 "08c3b1eb61fa417671d5995347cf619c07c6d7b20dc0bf7608dc6e8d5ad430d7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rigdev/rig/releases/download/v1.9.2/rig-ops_linux_arm64.tar.gz"
+      sha256 "41efd9c3ac15ba849f1851222413c431fd35c88a40a0d9d1a249c1b8c152cc64"
 
       def install
         bin.install "rig-ops"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rigdev/rig/releases/download/v1.9.1/rig-ops_linux_arm64.tar.gz"
-      sha256 "caea29182d86e8919cca5b5334353ef3ea4b0786fc6c640595da3df7624a6437"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.9.2/rig-ops_linux_x86_64.tar.gz"
+      sha256 "f7844bf8981dfb2f7e8b192c3cdeae3fba7451daf02afb5a8940996180fa6ba9"
 
       def install
         bin.install "rig-ops"
