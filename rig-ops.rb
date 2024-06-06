@@ -5,20 +5,20 @@
 class RigOps < Formula
   desc ""
   homepage ""
-  version "1.9.6"
+  version "1.10.0-rc.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rigdev/rig/releases/download/v1.9.6/rig-ops_darwin_arm64.tar.gz"
-      sha256 "84964e8623feeeaca1092a53157601b865592b0d3abb303ef956888c3decca1c"
+      url "https://github.com/rigdev/rig/releases/download/v1.10.0-rc.1/rig-ops_darwin_arm64.tar.gz"
+      sha256 "a8e91377fcf3ddb8c754776d2c30a9429626ed51c2afb273709501b96cb07b0d"
 
       def install
         bin.install "rig-ops"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.9.6/rig-ops_darwin_x86_64.tar.gz"
-      sha256 "58eb8f6cc248b0981cfb73d15786fe5888f09011d353e4da7d79f192cd72044d"
+      url "https://github.com/rigdev/rig/releases/download/v1.10.0-rc.1/rig-ops_darwin_x86_64.tar.gz"
+      sha256 "166bd5a8b731d09ea4ed5cae868ae94861440529002fe1059f8d83a8c0f0658e"
 
       def install
         bin.install "rig-ops"
@@ -27,17 +27,17 @@ class RigOps < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rigdev/rig/releases/download/v1.9.6/rig-ops_linux_arm64.tar.gz"
-      sha256 "a77d42ec8838a50c428f80bc258aec8b6d4cc6ec14fdcae80b35b805a5c40cd6"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.10.0-rc.1/rig-ops_linux_x86_64.tar.gz"
+      sha256 "0d2764b4d2945f42e97d29e0f1d55437a05881d6bbe94712aca31cd3f212a44d"
 
       def install
         bin.install "rig-ops"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.9.6/rig-ops_linux_x86_64.tar.gz"
-      sha256 "2a94cdb816efedb76f8d7be05c7682cfa27dff990277679323f5fb667b0c525b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rigdev/rig/releases/download/v1.10.0-rc.1/rig-ops_linux_arm64.tar.gz"
+      sha256 "c346739f7ed1f86294ad4cc1f485bc11ef3b1d67b739ec501a2dd500c3ac0e14"
 
       def install
         bin.install "rig-ops"
