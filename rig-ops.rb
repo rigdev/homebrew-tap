@@ -5,20 +5,20 @@
 class RigOps < Formula
   desc ""
   homepage ""
-  version "1.10.4"
+  version "1.10.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rigdev/rig/releases/download/v1.10.4/rig-ops_darwin_arm64.tar.gz"
-      sha256 "af8a04a0b9c788d49a80fe50e82bb4c785b36874d5e7a8d91fd8e23673a038dc"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.10.5/rig-ops_darwin_x86_64.tar.gz"
+      sha256 "5c948226e6b91f2540e5ffd27069d71ac18256fedfeaacac9a98b48fbbdc29b0"
 
       def install
         bin.install "rig-ops"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.10.4/rig-ops_darwin_x86_64.tar.gz"
-      sha256 "77feef4c7579f695fd592f45edd8336bfaa8097d815d89213236498663070c12"
+    if Hardware::CPU.arm?
+      url "https://github.com/rigdev/rig/releases/download/v1.10.5/rig-ops_darwin_arm64.tar.gz"
+      sha256 "2368f1da870701a591c44b88762225b5511cda2aa2028482c278052fea2e0272"
 
       def install
         bin.install "rig-ops"
@@ -28,16 +28,16 @@ class RigOps < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.10.4/rig-ops_linux_x86_64.tar.gz"
-      sha256 "a22d36d7b22adf7d1143ddbdc2ee6f4d12557195403b92fc1cc22c173300c8fb"
+      url "https://github.com/rigdev/rig/releases/download/v1.10.5/rig-ops_linux_x86_64.tar.gz"
+      sha256 "fd77e90479a9e82017eb27cd1b6bcee9fae73050f55afad43205fb0400b85f24"
 
       def install
         bin.install "rig-ops"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rigdev/rig/releases/download/v1.10.4/rig-ops_linux_arm64.tar.gz"
-      sha256 "32dbbc3412de9cc76f4a322f32132f86f5913ff8b6add137bcc02050736e04b9"
+      url "https://github.com/rigdev/rig/releases/download/v1.10.5/rig-ops_linux_arm64.tar.gz"
+      sha256 "17034ee4f304c9be0050934707e0226a3e863419b5cecbd84db6d0d21836eb51"
 
       def install
         bin.install "rig-ops"
