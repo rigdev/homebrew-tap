@@ -5,20 +5,20 @@
 class Rig < Formula
   desc ""
   homepage ""
-  version "1.11.4-rc.1"
+  version "1.11.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rigdev/rig/releases/download/v1.11.4-rc.1/rig_darwin_arm64.tar.gz"
-      sha256 "b0411e3dc502ef6a0d5e6dc387fdf107393cbaefff416400e9714ba7f8e7ced2"
+      url "https://github.com/rigdev/rig/releases/download/v1.11.4/rig_darwin_arm64.tar.gz"
+      sha256 "ee20f93d23cb48f492df4326e26bf67f12df5132d630684f4233c8dfd2c8ecf5"
 
       def install
         bin.install "rig"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.11.4-rc.1/rig_darwin_x86_64.tar.gz"
-      sha256 "afcd41d9969cd441b89eed2e091a050aa1e4d87eb275d30cdd74ea0b46b099c0"
+      url "https://github.com/rigdev/rig/releases/download/v1.11.4/rig_darwin_x86_64.tar.gz"
+      sha256 "4543947a4adbde6c0cb754c9f2a02cbd2579ed3c0ababb26e0cd5566b173e30a"
 
       def install
         bin.install "rig"
@@ -27,17 +27,17 @@ class Rig < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rigdev/rig/releases/download/v1.11.4-rc.1/rig_linux_arm64.tar.gz"
-      sha256 "1b97801fa449a7787d684b755243b4cb8b8e1a0143a840d91f4d8699b03b8841"
+    if Hardware::CPU.intel?
+      url "https://github.com/rigdev/rig/releases/download/v1.11.4/rig_linux_x86_64.tar.gz"
+      sha256 "1ea25964887921bd525290d6f84fc082abc1127a35238575f2fbebae37695681"
 
       def install
         bin.install "rig"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rigdev/rig/releases/download/v1.11.4-rc.1/rig_linux_x86_64.tar.gz"
-      sha256 "e5300183a428e1f92bdab158b614ffcd6c9f2ae9cba86da11338278db00210ba"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rigdev/rig/releases/download/v1.11.4/rig_linux_arm64.tar.gz"
+      sha256 "1bb20a1de958738a2964152117d8a083f21685301d9b78987a61af9e18f1f13a"
 
       def install
         bin.install "rig"
